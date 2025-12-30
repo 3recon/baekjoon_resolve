@@ -1,3 +1,6 @@
+import sys
+sys.setrecursionlimit(10**7)
+
 def dfs(x,y):
     if x<0 or y<0 or x>=n or y>=m:
         return 
@@ -9,8 +12,6 @@ def dfs(x,y):
     dfs(x-1,y)
     dfs(x,y+1)
     dfs(x,y-1)
-
-
 
 t=int(input())
 
