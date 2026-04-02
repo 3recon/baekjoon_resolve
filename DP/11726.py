@@ -1,12 +1,11 @@
 n=int(input())
+a,b=1,2
 
-dp=[0]*n
-dp[0],dp[1]=1,2
 if n<=2:
-    print(dp[-1]%10007)
+    print(n)
 else:
     for i in range(2,n):
-        dp[i]=dp[i-1]+dp[i-2]
-    print(dp[-1]%10007)
-
-1,2,3,5,8,13
+        temp=b
+        b+=a
+        a=temp
+    print(b%10007)
